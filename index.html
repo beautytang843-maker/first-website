@@ -193,7 +193,7 @@
       <section class="faq-section wrap section" id="faq" aria-labelledby="faq-title">
         <div class="faq-heading">
           <p class="eyebrow">03 / 遇到一点小问题？</p>
-          <h2 id="faq-title">先别急，<br>答案可能在这里。</h2>
+          <h2 id="faq-title">LocalSend 常见问题<br>与故障排查</h2>
           <p>从最常遇到的问题开始排查。</p>
           <a href="https://github.com/localsend/localsend#troubleshooting" target="_blank" rel="noopener noreferrer">查看官方故障排查 <span aria-hidden="true">↗</span></a>
         </div>
@@ -206,10 +206,17 @@
           </details>
           <details>
             <summary>为什么找不到另一台设备？<span aria-hidden="true"></span></summary>
-            <div class="faq-answer">
-              <p>先确认双方都打开了 LocalSend，并连接到同一个可互通的本地网络。访客 Wi-Fi 的设备隔离、防火墙和 VPN 都可能影响发现设备。</p>
-              <p>在你信任的家庭网络中，Windows 可检查网络是否设为“专用”；苹果设备可检查是否允许 LocalSend 访问“本地网络”。</p>
-            </div>
+           <div class="faq-answer">
+  <p>LocalSend 找不到设备时，可以按下面顺序检查：</p>
+  <ol>
+    <li>确认两台设备都打开了 LocalSend，并连接到可互通的同一本地网络。访客 Wi-Fi 可能会隔离设备。</li>
+    <li>如果接收端是 Windows，在可信的家庭网络中检查网络类型是否为“专用”，并允许 LocalSend 进行本地网络通信。</li>
+    <li>如果使用 iPhone、iPad 或 Mac，检查系统是否授予 LocalSend“本地网络”权限。</li>
+    <li>如果正在使用 VPN，检查它是否允许本地网络（LAN）通信。</li>
+  </ol>
+  <p>仍无法发现设备时，记录两端系统、LocalSend 版本和网络环境，再参考官方文档或提交问题。</p>
+  <p>来源：<a href="https://github.com/localsend/localsend#troubleshooting" target="_blank" rel="noopener noreferrer">LocalSend 官方故障排查文档</a>。</p>
+</div>
           </details>
           <details>
             <summary>文件安全吗，会先上传到云端吗？<span aria-hidden="true"></span></summary>
