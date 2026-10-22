@@ -2055,3 +2055,149 @@ details[open] summary>span:after {
     transition: none!important
   }
 }
+
+/* Each language has its own page; both share the same visual design. */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-shrink: 0;
+}
+
+.header-inner .language-switch {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 3px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  font-size: 12px;
+}
+
+.language-link {
+  padding: 8px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+.header-inner .language-link.is-current {
+  color: #fff;
+  background: var(--green);
+  font-weight: 650;
+}
+
+html[lang="en"] .brand-en {
+  letter-spacing: 1px;
+  font-size: 8px;
+}
+
+html[lang="en"] h1 {
+  font-size: clamp(44px, 4.8vw, 64px);
+  line-height: 1.16;
+  letter-spacing: -2.4px;
+}
+
+html[lang="en"] .hero-desc {
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+html[lang="en"] .hero-note {
+  flex-wrap: wrap;
+}
+
+html[lang="en"] .art-top,
+html[lang="en"] .art-bottom {
+  gap: 10px;
+}
+
+html[lang="en"] .transfer-status {
+  line-height: 1.4;
+}
+
+html[lang="en"] .phone-body > span {
+  font-size: 7px;
+}
+
+html[lang="en"] .faq-heading h2 {
+  font-size: clamp(27px, 2.5vw, 34px);
+}
+
+html[lang="en"] .closing > a {
+  white-space: normal;
+}
+
+@media (max-width: 980px) {
+  .header-inner > nav {
+    gap: 20px;
+  }
+  .header-actions {
+    gap: 10px;
+  }
+  html[lang="en"] .hero .eyebrow {
+    flex-wrap: wrap;
+    row-gap: 7px;
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 800px) {
+  .header-inner > nav {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .header-inner {
+    gap: 10px;
+  }
+  .header-actions .github-link {
+    display: none;
+  }
+  .header-inner .language-switch {
+    font-size: 11px;
+  }
+  .language-link {
+    padding: 8px;
+  }
+  html[lang="en"] .brand {
+    gap: 8px;
+    font-size: 16px;
+    letter-spacing: 0;
+  }
+  html[lang="en"] .brand-en {
+    font-size: 6px;
+    letter-spacing: .3px;
+  }
+  html[lang="en"] h1 {
+    font-size: clamp(40px, 10.6vw, 56px);
+    letter-spacing: -1.8px;
+  }
+  html[lang="en"] .hero-desc {
+    font-size: 13px;
+  }
+  html[lang="en"] .hero-actions {
+    flex-wrap: wrap;
+  }
+  html[lang="en"] .art-top {
+    font-size: 8px;
+  }
+  html[lang="en"] .art-top > span:last-child {
+    font-size: 7px;
+  }
+  html[lang="en"] .art-bottom > span:first-child {
+    max-width: 58%;
+  }
+  html[lang="en"] .art-bottom > span:last-child {
+    font-size: 6px;
+  }
+  html[lang="en"] .closing > a {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 359px) {
+  html[lang="en"] h1 {
+    font-size: 38px;
+  }
+}

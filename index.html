@@ -1,51 +1,61 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#f6f7f2">
-   <title>LocalSend 使用教程：手机电脑互传文件与常见问题｜开源小路</title>
-    <meta name="description" content="LocalSend 是什么、怎么下载、怎么用？开源小路用三步讲清手机与电脑在局域网里互传文件的方法，并整理找不到设备、网络连接和加密等常见问题。">
-    <link rel="canonical" href="https://beautytang843-maker.github.io/first-website/">
-    <meta property="og:title" content="文件互传，少绕一步。｜LocalSend 中文指南">
-    <meta property="og:description" content="一个好用的开源工具，一条清楚的入门小路。认识 LocalSend，从第一份文件开始。">
+    <title>LocalSend Guide: Share Files Between Your Phone and Computer | Open Trail</title>
+    <meta name="description" content="Learn how to download and use LocalSend to share files between your phone and computer over a local network, with help for device discovery, connections, and encryption.">
+    <link rel="canonical" href="https://beautytang843-maker.github.io/first-website/en/">
+    <link rel="alternate" hreflang="zh-CN" href="https://beautytang843-maker.github.io/first-website/">
+    <link rel="alternate" hreflang="en" href="https://beautytang843-maker.github.io/first-website/en/">
+    <link rel="alternate" hreflang="x-default" href="https://beautytang843-maker.github.io/first-website/">
+    <meta property="og:title" content="Share files. Skip the detour. | LocalSend Guide">
+    <meta property="og:description" content="A useful open-source tool. A clear path to getting started. Meet LocalSend and share your first file.">
     <meta property="og:type" content="website">
-    <meta property="og:locale" content="zh_CN">
-    <meta property="og:url" content="https://beautytang843-maker.github.io/first-website/">
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="zh_CN">
+    <meta property="og:url" content="https://beautytang843-maker.github.io/first-website/en/">
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../styles.css?v=bilingual-1">
+    <script src="../script.js?v=bilingual-1" defer></script>
   </head>
   <body>
-    <a class="skip-link" href="#main">跳到正文</a>
+    <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <div class="wrap header-inner">
-        <a class="brand" href="#" aria-label="开源小路，回到顶部"><span class="brand-icon" aria-hidden="true">↗</span><span>开源小路<span class="brand-en">OPEN TRAIL</span></span></a>
-        <nav aria-label="主要导航">
-          <a href="#about">认识项目</a>
-          <a href="#start">三步上手</a>
-          <a href="#faq">常见问题</a>
+        <a class="brand" href="#" aria-label="Open Trail, back to top"><span class="brand-icon" aria-hidden="true">↗</span><span>OPEN TRAIL<span class="brand-en">A PATH INTO OPEN SOURCE</span></span></a>
+        <nav aria-label="Main navigation">
+          <a href="#about">About</a>
+          <a href="#start">Get started</a>
+          <a href="#faq">FAQ</a>
         </nav>
-        <a class="github-link" href="https://github.com/localsend/localsend" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.56.1.76-.24.76-.53v-2.06c-3.1.67-3.76-1.31-3.76-1.31-.51-1.29-1.24-1.63-1.24-1.63-1.02-.7.08-.68.08-.68 1.12.08 1.71 1.15 1.71 1.15.99 1.7 2.6 1.2 3.23.92.1-.72.39-1.2.71-1.48-2.48-.28-5.08-1.24-5.08-5.51 0-1.22.44-2.22 1.15-3-.11-.28-.5-1.42.11-2.96 0 0 .94-.3 3.05 1.14a10.6 10.6 0 0 1 5.56 0c2.12-1.43 3.05-1.14 3.05-1.14.61 1.54.23 2.68.12 2.96.71.78 1.14 1.78 1.14 3 0 4.28-2.6 5.23-5.09 5.5.4.35.76 1.02.76 2.06V22c0 .3.2.64.77.53A11.1 11.1 0 0 0 12 .9Z"/></svg><span>GitHub</span><span aria-hidden="true">↗</span></a>
+        <div class="header-actions">
+          <a class="github-link" href="https://github.com/localsend/localsend" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.56.1.76-.24.76-.53v-2.06c-3.1.67-3.76-1.31-3.76-1.31-.51-1.29-1.24-1.63-1.24-1.63-1.02-.7.08-.68.08-.68 1.12.08 1.71 1.15 1.71 1.15.99 1.7 2.6 1.2 3.23.92.1-.72.39-1.2.71-1.48-2.48-.28-5.08-1.24-5.08-5.51 0-1.22.44-2.22 1.15-3-.11-.28-.5-1.42.11-2.96 0 0 .94-.3 3.05 1.14a10.6 10.6 0 0 1 5.56 0c2.12-1.43 3.05-1.14 3.05-1.14.61 1.54.23 2.68.12 2.96.71.78 1.14 1.78 1.14 3 0 4.28-2.6 5.23-5.09 5.5.4.35.76 1.02.76 2.06V22c0 .3.2.64.77.53A11.1 11.1 0 0 0 12 .9Z"/></svg><span>GitHub</span><span aria-hidden="true">↗</span></a>
+          <nav class="language-switch" aria-label="Language">
+            <a class="language-link" href="../" lang="zh-CN" hreflang="zh-CN">中文</a>
+            <a class="language-link is-current" href="./" lang="en" hreflang="en" aria-current="page">English</a>
+          </nav>
+        </div>
       </div>
     </header>
     <main id="main">
-      <!-- 第一课：HTML 负责内容。试着修改下面这句标题，再刷新网页。 -->
+      <!-- Lesson one: HTML defines the content. Try editing the heading below, then refresh the page. -->
       <section class="hero wrap" aria-labelledby="hero-title">
         <div class="hero-copy">
-          <p class="eyebrow"><span class="dot"></span> 开源工具，认真讲明白 <span class="issue">VOL. 001</span></p>
-          <p class="project-label"><span class="mini-logo" aria-hidden="true">⇄</span> LocalSend 中文指南</p>
-          <h1 id="hero-title">轻松分享，<br>少绕<span class="marked">一步<svg viewBox="0 0 210 18" preserveAspectRatio="none" aria-hidden="true"><path d="M4 11Q88 1 205 10M30 16Q120 6 193 13"/></svg></span>。</h1>
-          <p class="hero-desc">照片在手机，文档在电脑？<br>用 LocalSend，在附近的设备间直接分享。<br class="desktop-break">免费、开源，也不必先把文件传到云端。</p>
+          <p class="eyebrow"><span class="dot"></span> OPEN SOURCE, CLEARLY EXPLAINED <span class="issue">VOL. 001</span></p>
+          <p class="project-label"><span class="mini-logo" aria-hidden="true">⇄</span> A guide to LocalSend</p>
+          <h1 id="hero-title">Share files.<br> Skip the <span class="marked">detour<svg viewBox="0 0 210 18" preserveAspectRatio="none" aria-hidden="true"><path d="M4 11Q88 1 205 10M30 16Q120 6 193 13"/></svg></span>.</h1>
+          <p class="hero-desc">Photos on your phone. Documents on your computer.<br> Use LocalSend to share directly between nearby devices.<br class="desktop-break"> Free, open source, and no cloud upload needed.</p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#start">开始使用 <span aria-hidden="true">↗</span></a>
-            <button class="button button-text" id="demo-button" type="button"><span class="play-icon" aria-hidden="true">▶</span> 看一次互传演示</button>
+            <a class="button button-primary" href="#start">Get started <span aria-hidden="true">↗</span></a>
+            <button class="button button-text" id="demo-button" type="button"><span class="play-icon" aria-hidden="true">▶</span> Watch a demo</button>
           </div>
-          <div class="hero-note"><span class="tiny-check" aria-hidden="true">✓</span> 无需账号 <span>·</span> 跨平台 <span>·</span> 本地网络传输</div>
+          <div class="hero-note"><span class="tiny-check" aria-hidden="true">✓</span> No account <span>·</span> Cross-platform <span>·</span> Local transfers</div>
         </div>
-        <div class="hero-art" role="img" aria-label="手机与电脑在同一本地网络传输文件的示意图">
+        <div class="hero-art" role="img" aria-label="Illustration of a phone and computer sharing a file on the same local network">
           <div class="art-top">
-            <span><i></i> 两台设备，一条小路</span><span>LOCAL NETWORK</span>
+            <span><i></i> Two devices. One direct path.</span><span>LOCAL NETWORK</span>
           </div>
           <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
           <span class="art-spark spark-one" aria-hidden="true">✳</span><span class="art-spark spark-two" aria-hidden="true">+</span>
@@ -55,11 +65,11 @@
                 <span>● ● ●</span><span>LocalSend</span>
               </div>
               <div class="laptop-content">
-                <div class="device-avatar" aria-hidden="true">↙</div><strong>我的笔记本</strong><span class="device-sub">准备接收文件</span>
+                <div class="device-avatar" aria-hidden="true">↙</div><strong>My laptop</strong><span class="device-sub">Ready to receive</span>
                 <div class="received-file">
                   <span class="file-icon" aria-hidden="true">▤</span>
                   <div>
-                    <b>周末的照片.jpg</b><span class="transfer-status" id="transfer-status">等待发送</span>
+                    <b>weekend-photo.jpg</b><span class="transfer-status" id="transfer-status">Waiting to send</span>
                   </div>
                   <span class="file-done" id="file-done" aria-hidden="true">✓</span>
                 </div>
@@ -73,11 +83,11 @@
           <div class="phone">
             <div class="phone-speaker"></div><span class="phone-time">09:41</span>
             <div class="phone-body">
-              <div class="phone-icon" aria-hidden="true">⇄</div><strong>我的手机</strong><span>发现附近的设备</span>
+              <div class="phone-icon" aria-hidden="true">⇄</div><strong>My phone</strong><span>Finding nearby devices</span>
               <div class="phone-photo" aria-hidden="true">
                 <span class="photo-sun"></span><span class="mountain mountain-back"></span><span class="mountain"></span>
               </div>
-              <div class="phone-send" id="phone-send">准备分享 ↗</div>
+              <div class="phone-send" id="phone-send">Ready to share ↗</div>
             </div>
             <div class="phone-home"></div>
           </div>
@@ -87,50 +97,50 @@
           <div class="file-bubble">
             <span aria-hidden="true">↗</span>
             <div>
-              <strong>从手机，到电脑</strong><span>不用给自己发消息了</span>
+              <strong>From phone to computer</strong><span>Skip messaging yourself</span>
             </div>
           </div>
           <div class="art-bottom">
-            <span><span class="lock-icon" aria-hidden="true">◇</span> 默认 HTTPS 加密</span><span>交互示意 · 不会传输真实文件</span>
+            <span><span class="lock-icon" aria-hidden="true">◇</span> HTTPS encryption by default</span><span>Demo only · No real files are sent</span>
           </div>
         </div>
         <p class="demo-message sr-only" id="demo-message" role="status" aria-live="polite"></p>
       </section>
       <div class="platform-strip">
         <div class="wrap platform-inner">
-          <span>不同设备，也能聊得来</span>
+          <span>Different devices. Connected.</span>
           <div class="platform-list">
             <span>▦ Windows</span><span>● macOS</span><span>⌘ Linux</span><span>♙ Android</span><span>◉ iOS</span>
           </div>
-          <span class="platform-end">一个应用，五种平台 ↗</span>
+          <span class="platform-end">One app. Five platforms. ↗</span>
         </div>
       </div>
       <section class="about-section wrap section" id="about" aria-labelledby="about-title">
         <div class="section-intro">
           <div>
-            <p class="eyebrow">01 / 认识一下</p>
-            <h2 id="about-title">不是所有文件，<br>都需要去云端旅行。</h2>
+            <p class="eyebrow">01 / MEET LOCALSEND</p>
+            <h2 id="about-title">Not every file<br> needs the cloud.</h2>
           </div>
-          <p>LocalSend 是一个免费、开源的文件传输工具。<br>只要设备处在可互通的同一本地网络，<br>照片、视频、文档和文字，都能直接分享。</p>
+          <p>LocalSend is a free, open-source file-sharing tool.<br> Connect your devices to the same reachable local network<br> to share photos, videos, documents, and text directly.</p>
         </div>
         <div class="benefit-grid">
           <article class="benefit">
             <div class="benefit-icon" aria-hidden="true">⇄</div>
-            <h3>跨过设备的边界</h3>
-            <p>Windows 电脑接收 iPhone 照片，安卓手机分享给 Mac。设备不同，也能互传。</p>
-            <span class="benefit-tag">跨平台</span>
+            <h3>Across your devices</h3>
+            <p>Send iPhone photos to a Windows computer, or share from Android to a Mac. Your devices can work together.</p>
+            <span class="benefit-tag">Cross-platform</span>
           </article>
           <article class="benefit">
             <div class="benefit-icon" aria-hidden="true">◎</div>
-            <h3>打开，就能开始</h3>
-            <p>不必注册新账号，也不用记住密码。在两台设备上安装并打开应用即可。</p>
-            <span class="benefit-tag">无需登录</span>
+            <h3>Open it. Get going.</h3>
+            <p>No new account or password to remember. Install and open the app on both devices to get started.</p>
+            <span class="benefit-tag">No sign-in</span>
           </article>
           <article class="benefit">
             <div class="benefit-icon" aria-hidden="true">⌁</div>
-            <h3>文件走身边的小路</h3>
-            <p>文件在本地网络中传输，无需经过云端服务器。没有互联网，也可以互传。</p>
-            <span class="benefit-tag">需要本地网络</span>
+            <h3>Keep the journey local</h3>
+            <p>Files travel over your local network without passing through a cloud server. Transfers work without internet access.</p>
+            <span class="benefit-tag">Local network required</span>
           </article>
         </div>
       </section>
@@ -138,17 +148,17 @@
         <div class="wrap section">
           <div class="section-heading">
             <div>
-              <p class="eyebrow">02 / 动手试一试</p>
-              <h2 id="start-title">你的第一次互传，<br class="mobile-break">只差三步。</h2>
+              <p class="eyebrow">02 / GIVE IT A TRY</p>
+              <h2 id="start-title">Your first transfer.<br class="mobile-break"> Three simple steps.</h2>
             </div>
-            <span class="section-aside">拿起手机，打开电脑，跟着做就好。</span>
+            <span class="section-aside">Grab your phone and computer, and follow along.</span>
           </div>
           <div class="steps-layout">
             <aside class="download-panel">
               <span class="download-glyph" aria-hidden="true">↧</span>
-              <h3>先给设备装上它。</h3>
-              <p>发送端和接收端都需要安装。<br>选择你的系统，前往官方下载。</p>
-              <label for="platform-select">你的设备系统</label>
+              <h3>Install it on both devices.</h3>
+              <p>Both devices need the app.<br> Choose your system for the official download.</p>
+              <label for="platform-select">Your operating system</label>
               <div class="select-wrap">
                 <select id="platform-select">
                   <option value="Windows">Windows</option>
@@ -158,32 +168,32 @@
                   <option value="iOS">iOS / iPadOS</option>
                 </select>
               </div>
-              <p class="download-hint" id="download-hint" aria-live="polite">在官方下载页选择 Windows 安装包，按提示安装。</p>
-              <a class="button download-button" id="download-link" href="https://localsend.org/download" target="_blank" rel="noopener noreferrer">前往官方下载 <span aria-hidden="true">↗</span></a><span class="download-caption">只链接官方渠道，放心找对入口。</span>
+              <p class="download-hint" id="download-hint" aria-live="polite">Choose the Windows installer on the official download page and follow the installation prompts.</p>
+              <a class="button download-button" id="download-link" href="https://localsend.org/download" target="_blank" rel="noopener noreferrer">Official download <span aria-hidden="true">↗</span></a><span class="download-caption">All download links lead to official sources.</span>
             </aside>
             <ol class="steps">
               <li>
                 <span class="step-number">01</span>
                 <div>
-                  <h3>都打开，连上同一本地网络</h3>
-                  <p>在两台设备上打开 LocalSend，连接同一个可互通的本地网络，例如家里的 Wi-Fi。</p>
-                  <div class="step-tip"><span aria-hidden="true">↳</span> 电脑连网线也可以，关键是设备之间能互相通信。</div>
+                  <h3>Open both apps. Join one local network.</h3>
+                  <p>Open LocalSend on both devices and connect them to the same local network where they can reach each other, such as your home Wi-Fi.</p>
+                  <div class="step-tip"><span aria-hidden="true">↳</span> An Ethernet connection works too. What matters is that the devices can communicate.</div>
                 </div>
               </li>
               <li>
                 <span class="step-number">02</span>
                 <div>
-                  <h3>选文件，再选接收设备</h3>
-                  <p>在发送端选择文件、照片或文字，然后点选附近设备列表中的接收设备。</p>
-                  <div class="step-tip"><span aria-hidden="true">↳</span> 先对照一下设备名称，避免选错。</div>
+                  <h3>Pick a file, then the receiving device.</h3>
+                  <p>On the sending device, choose a file, photo, or text. Then select the recipient from the nearby devices list.</p>
+                  <div class="step-tip"><span aria-hidden="true">↳</span> Check the device name before you send.</div>
                 </div>
               </li>
               <li>
                 <span class="step-number">03</span>
                 <div>
-                  <h3>接收端确认，完成！</h3>
-                  <p>在接收设备上按提示确认。传输完成后，检查接收文件夹；保存位置可以在设置中调整。</p>
-                  <div class="step-tip"><span aria-hidden="true">✓</span> 第一次可以先试传一张照片。</div>
+                  <h3>Accept on the other device. Done!</h3>
+                  <p>Accept the transfer when prompted on the receiving device. After it finishes, check the destination folder. You can change the save location in Settings.</p>
+                  <div class="step-tip"><span aria-hidden="true">✓</span> Try sending one photo for your first transfer.</div>
                 </div>
               </li>
             </ol>
@@ -192,49 +202,49 @@
       </section>
       <section class="faq-section wrap section" id="faq" aria-labelledby="faq-title">
         <div class="faq-heading">
-          <p class="eyebrow">03 / 遇到一点小问题？</p>
-          <h2 id="faq-title">LocalSend 常见问题<br>与故障排查</h2>
-          <p>从最常遇到的问题开始排查。</p>
-          <a href="https://github.com/localsend/localsend#troubleshooting" target="_blank" rel="noopener noreferrer">查看官方故障排查 <span aria-hidden="true">↗</span></a>
+          <p class="eyebrow">03 / NEED A HAND?</p>
+          <h2 id="faq-title">LocalSend FAQ<br> and troubleshooting</h2>
+          <p>Start with the most common questions.</p>
+          <a href="https://github.com/localsend/localsend#troubleshooting" target="_blank" rel="noopener noreferrer">Official troubleshooting <span aria-hidden="true">↗</span></a>
         </div>
         <div class="faq-list">
           <details open>
-            <summary>LocalSend 需要互联网吗？<span aria-hidden="true"></span></summary>
+            <summary>Does LocalSend need the internet?<span aria-hidden="true"></span></summary>
             <div class="faq-answer">
-              <p>核心的本地传输不需要互联网，但两台设备仍需连接到可互通的本地网络。“不用互联网”不等于“不需要网络”。下载和安装应用时通常仍需要互联网。</p>
+              <p>Local file transfers do not require internet access, but both devices still need to be on a local network where they can reach each other. You still need a network connection, even without internet access. Downloading and installing the app generally requires internet access.</p>
             </div>
           </details>
           <details>
-            <summary>为什么找不到另一台设备？<span aria-hidden="true"></span></summary>
-           <div class="faq-answer">
-  <p>LocalSend 找不到设备时，可以按下面顺序检查：</p>
-  <ol>
-    <li>确认两台设备都打开了 LocalSend，并连接到可互通的同一本地网络。访客 Wi-Fi 可能会隔离设备。</li>
-    <li>如果接收端是 Windows，在可信的家庭网络中检查网络类型是否为“专用”，并允许 LocalSend 进行本地网络通信。</li>
-    <li>如果使用 iPhone、iPad 或 Mac，检查系统是否授予 LocalSend“本地网络”权限。</li>
-    <li>如果正在使用 VPN，检查它是否允许本地网络（LAN）通信。</li>
-  </ol>
-  <p>仍无法发现设备时，记录两端系统、LocalSend 版本和网络环境，再参考官方文档或提交问题。</p>
-  <p>来源：<a href="https://github.com/localsend/localsend#troubleshooting" target="_blank" rel="noopener noreferrer">LocalSend 官方故障排查文档</a>。</p>
-</div>
-          </details>
-          <details>
-            <summary>文件安全吗，会先上传到云端吗？<span aria-hidden="true"></span></summary>
+            <summary>Why can’t I find the other device?<span aria-hidden="true"></span></summary>
             <div class="faq-answer">
-              <p>LocalSend 在本地设备之间传输文件，无需先上传到云端。默认使用 HTTPS 加密通信，还可以开启 PIN 验证。接收前，请核对发送方和设备名称。</p>
-              <p><a href="https://localsend.org/privacy" target="_blank" rel="noopener noreferrer">阅读官方隐私政策 ↗</a></p>
+              <p>If LocalSend cannot find a device, check the following in order:</p>
+              <ol>
+                <li>Make sure LocalSend is open on both devices and that they are on the same reachable local network. Guest Wi-Fi may isolate devices from each other.</li>
+                <li>If the receiving device runs Windows, check that your trusted home network is set to Private, and allow LocalSend to communicate on the local network.</li>
+                <li>On an iPhone, iPad, or Mac, check whether LocalSend has Local Network permission in the system settings.</li>
+                <li>If you use a VPN, check whether it allows local network (LAN) communication.</li>
+              </ol>
+              <p>If the device still does not appear, note both operating systems, LocalSend versions, and your network setup. Then consult the official documentation or report an issue.</p>
+              <p>Source: <a href="https://github.com/localsend/localsend#troubleshooting" target="_blank" rel="noopener noreferrer">LocalSend’s official troubleshooting guide</a>.</p>
             </div>
           </details>
           <details>
-            <summary>防火墙需要怎样设置？<span aria-hidden="true"></span></summary>
+            <summary>Are files secure? Do they go to the cloud?<span aria-hidden="true"></span></summary>
             <div class="faq-answer">
-              <p>按官方说明，允许 LocalSend 进行本地网络通信，默认入站端口为 TCP 和 UDP 53317。优先按系统提示允许该应用在可信网络中通信，具体步骤可参考官方故障排查。</p>
+              <p>LocalSend transfers files between local devices without uploading them to the cloud first. It uses HTTPS encryption by default, and PIN verification is available. Check the sender and device name before accepting a transfer.</p>
+              <p><a href="https://localsend.org/privacy" target="_blank" rel="noopener noreferrer">Read the official privacy policy ↗</a></p>
             </div>
           </details>
           <details>
-            <summary>这是 LocalSend 的官方网站吗？<span aria-hidden="true"></span></summary>
+            <summary>How should I configure my firewall?<span aria-hidden="true"></span></summary>
             <div class="faq-answer">
-              <p>这里是“开源小路”独立制作的中文入门指南，与 LocalSend 官方无隶属关系。软件由 LocalSend 社区开发，项目采用 Apache License 2.0。本站的下载入口均指向官方渠道。</p>
+              <p>Follow the official instructions to allow LocalSend to communicate on your local network. The default inbound port is 53317 for both TCP and UDP. When your system prompts you, allow the app on a trusted network. See the official troubleshooting guide for details.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Is this the official LocalSend website?<span aria-hidden="true"></span></summary>
+            <div class="faq-answer">
+              <p>This is an independent beginner’s guide by Open Trail, with no official affiliation with LocalSend. The app is developed by the LocalSend community and uses the Apache License 2.0. Every download link on this site points to an official source.</p>
             </div>
           </details>
         </div>
@@ -243,20 +253,20 @@
         <div>
           <span class="closing-symbol" aria-hidden="true">↗</span>
           <div>
-            <p>好的工具，让事情简单一点。</p>
-            <span>从传好一份文件开始，走进开源的小世界。</span>
+            <p>Good tools make things simpler.</p>
+            <span>Start with one shared file. Discover a little more of open source.</span>
           </div>
         </div>
-        <a href="https://github.com/localsend/localsend" target="_blank" rel="noopener noreferrer">去 GitHub 认识 LocalSend <span aria-hidden="true">↗</span></a>
+        <a href="https://github.com/localsend/localsend" target="_blank" rel="noopener noreferrer">Explore LocalSend on GitHub <span aria-hidden="true">↗</span></a>
       </section>
     </main>
     <footer class="wrap site-footer">
       <div>
-        <a class="footer-brand" href="#">开源小路 <span>OPEN TRAIL</span></a>
-        <p>一个项目，一条清楚的入门小路。</p>
+        <a class="footer-brand" href="#">OPEN TRAIL <span>A PATH INTO OPEN SOURCE</span></a>
+        <p>One project. A clear path to getting started.</p>
       </div>
       <div class="footer-sources">
-        <span>内容依据：<a href="https://localsend.org/" target="_blank" rel="noopener noreferrer">官方网站</a> / <a href="https://github.com/localsend/localsend" target="_blank" rel="noopener noreferrer">项目文档</a></span><span>独立中文指南 · 核对日期 <time datetime="2026-10-21">2026.10.21</time></span>
+        <span>Sources: <a href="https://localsend.org/" target="_blank" rel="noopener noreferrer">Official website</a> / <a href="https://github.com/localsend/localsend" target="_blank" rel="noopener noreferrer">Project documentation</a></span><span>Independent guide · Reviewed <time datetime="2026-10-21">Oct 21, 2026</time></span>
       </div>
     </footer>
   </body>
